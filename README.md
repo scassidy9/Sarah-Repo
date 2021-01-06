@@ -2,7 +2,7 @@
 
 The files in this repository were used to configure the network depicted below.
 
-![Images/Project_1_Diagram.png]
+![sarahcassidy/sarah_github/Sarah-Repo/Images/Project_1_Diagram.png]
 
 These files have been tested and used to generate a live ELK deployment on Azure. They can be used to either recreate the entire deployment pictured above. Alternatively, select portions of the _____ file may be used to install only certain pieces of it, such as Filebeat.
 
@@ -77,8 +77,7 @@ The playbook implements the following tasks:
 - ...
 
 The following screenshot displays the result of running `docker ps` after successfully configuring the ELK instance.
-
-! [Images/Docker_sweet_benz.png]
+! [sarahcassidy/sarah_github/Sarah-Repo/Images/Docker_sweet_benz.png]
 
 ### Target Machines & Beats
 This ELK server is configured to monitor the following machines:
@@ -96,11 +95,14 @@ These Beats allow us to collect the following information from each machine:
 In order to use the playbook, you will need to have an Ansible control node already configured. Assuming you have such a control node provisioned:
 
 SSH into the control node and follow the steps below:
-- Copy the _____ file to _____.
+- Copy the Ansible ELK Installation file .
 - Update the _____ file to include...
 - Run the playbook, and navigate to ____ to check that the installation worked as expected.
 
-_TODO: Answer the following questions to fill in the blanks:_
-- _Which file is the playbook? Where do you copy it?_
-- _Which file do you update to make Ansible run the playbook on a specific machine? How do I specify which machine to install the ELK server on versus which to install Fil$
-- _Which URL do you navigate to in order to check that the ELK server is running?
+_TODO: Answer the following questions to fill in the blanks:
+* Which file is the playbook? Where do you copy it?
+  * Ansible. 
+* Which file do you update to make Ansible run the playbook on a specific machine? How do I specify which machine to install the ELK server on versus which to install FileBeat
+  * 
+* Which URL do you navigate to in order to check that the ELK server is running?
+  *  http://13.68.239.154:5601/
