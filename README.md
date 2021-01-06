@@ -4,14 +4,16 @@ The files in this repository were used to configure the network depicted below.
 
 ![sarahcassidy/sarah_github/Sarah-Repo/Images/Project_1_Diagram.png]
 
-These files have been tested and used to generate a live ELK deployment on Azure. They can be used to either recreate the entire deployment pictured above. Alternatively, select portions of the _____ file may be used to install only certain pieces of it, such as Filebeat.
+These files have been tested and used to generate a live ELK deployment on Azure.
+They can be used to recreate the entire deployment pictured above. Alternatively, select portions of the *yml* or *config* file may be used to install only certain pieces of it, 
+such as Filebeat.
 
   - _TODO:  - TODO Find ansible_playbook
-  ansible hosts
-  ansible configuration
-  ansible ELK installation and VM configuration
-  ansible filebeat playbook
-  ansible filebeat config file
+- ansible hosts
+- ansible configuration
+- ansible ELK installation and VM configuration
+- ansible filebeat playbook
+- ansible filebeat config file
 
 This document contains the following details:
 - Description of the Topology
