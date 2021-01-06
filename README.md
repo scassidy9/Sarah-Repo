@@ -9,6 +9,7 @@ They can be used to recreate the entire deployment pictured above. Alternatively
 such as Filebeat.
 
   - _TODO:  - TODO Find ansible_playbook
+- Test  
 - ansible hosts
 - ansible configuration
 - ansible ELK installation and VM configuration
