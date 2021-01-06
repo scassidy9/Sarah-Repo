@@ -29,8 +29,11 @@ This document contains the following details:
 The main purpose of this network is to expose a load-balanced and monitored instance of DVWA, the D*mn Vulnerable Web Application.
 
 Load balancing ensures that the application will be highly monitored, in addition to restricting access to the network.
-The off-loading function of the load balancer defends an organizaion against distributed denial-of-service attack. It does this by shifting traffic from the corporate serv$
-Another level of security is a jump box (jump host or jump server) A jump box is a system on a network used to access and manage devices in a separate - generally remote -$
+The off-loading function of the load balancer defends an organizaion against distributed denial-of-service attack. It does this by shifting traffic from the corporate server to a 
+public cloud provider. 
+Another level of security is a jump box. A jump box is a system on a network used to access and manage devices in a separate - generally remote - locations. They create separation between 
+a users working area and the privileged assets within the network. A separation such as this keeps potentially compromised working areas free from direct contact of most valuable
+information. 
 
 Integrating an ELK server allows users to easily monitor the vulnerable VMs for changes to the *data* and *system* logs.
 * *Filebeat* monitors the log files or locations that you specify, collects log events and send them to either Elasticsearch or Logstash for cataloging.
@@ -79,7 +82,7 @@ The playbook implements the following tasks:
 - ...
 
 The following screenshot displays the result of running `docker ps` after successfully configuring the ELK instance.
-! [sarahcassidy/sarah_github/Sarah-Repo/Images/Docker_sweet_benz.png]
+! [Images/Docker_sweet_benz.png]
 
 ### Target Machines & Beats
 This ELK server is configured to monitor the following machines:
