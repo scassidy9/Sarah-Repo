@@ -2,7 +2,7 @@
 
 The files in this repository were used to configure the network depicted below.
 
-! [https://github.com/scassidy9/Sarah-Repo/blob/main/Images/Project_1_Diagram.png]
+![MyDiagram](https://github.com/scassidy9/Sarah-Repo/blob/main/Images/Project_1_Diagram.png)
 
 These files have been tested and used to generate a live ELK deployment on Azure.
 They can be used to recreate the entire deployment pictured above. Alternatively, select portions of the *yml* or *config* file may be used to install only certain pieces of it, 
@@ -10,7 +10,7 @@ such as Filebeat.
 
   - _TODO:  - TODO Find ansible_playbook
 - Test  
-- ansible hosts
+- Hosts
 - ansible configuration
 - ansible ELK installation and VM configuration
 - ansible filebeat playbook
