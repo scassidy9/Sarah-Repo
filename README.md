@@ -7,10 +7,8 @@ The files in this repository were used to configure the network depicted below.
 These files have been tested and used to generate a live ELK deployment on Azure.
 They can be used to recreate the entire deployment pictured above. Alternatively, select portions of the *yml* or *config* file may be used to install only certain pieces of it, 
 such as Filebeat.
-
-  - _TODO:  - TODO Find ansible_playbook
-- Test  
-- Hosts
+  
+- Hosts (http://github.com/scassidy9/Sarah-Repo/blob/main/Files/Hosts.pdf)
 - ansible configuration
 - ansible ELK installation and VM configuration
 - ansible filebeat playbook
@@ -83,7 +81,7 @@ The playbook implements the following tasks:
 - ...
 
 The following screenshot displays the result of running `docker ps` after successfully configuring the ELK instance.
-! [https://github.com/scassidy9/Sarah-Repo/blob/main/Images/Docker_sweet_benz.png]
+![Docker_sweet_benz](https://github.com/scassidy9/Sarah-Repo/blob/main/Images/Docker_sweet_benz.png)
 
 
 ### Target Machines & Beats
