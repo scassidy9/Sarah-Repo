@@ -1,0 +1,123 @@
+Last login: Tue Jan  5 20:50:16 on ttys000
+sarahcassidy@Sarahs-MacBook-Pro ~ % sudo -i
+Password:
+Sorry, try again.
+Password:
+Sarahs-MacBook-Pro:~ root# ssh RedTeamAdmin@40.78.21.200
+ssh: connect to host 40.78.21.200 port 22: Operation timed out
+Sarahs-MacBook-Pro:~ root# ssh RedTeamAdmin@40.78.21.200
+ssh: connect to host 40.78.21.200 port 22: Operation timed out
+Sarahs-MacBook-Pro:~ root# ssh RedTeamAdmin@40.78.21.200
+Welcome to Ubuntu 18.04.5 LTS (GNU/Linux 5.4.0-1034-azure x86_64)
+
+ * Documentation:  https://help.ubuntu.com
+ * Management:     https://landscape.canonical.com
+ * Support:        https://ubuntu.com/advantage
+
+  System information as of Wed Jan  6 23:12:20 UTC 2021
+
+  System load:  0.17              Processes:           116
+  Usage of /:   9.2% of 28.90GB   Users logged in:     0
+  Memory usage: 28%               IP address for eth0: 10.0.0.4
+  Swap usage:   0%
+
+ * Introducing self-healing high availability clusters in MicroK8s.
+   Simple, hardened, Kubernetes for production, from RaspberryPi to DC.
+
+     https://microk8s.io/high-availability
+
+5 packages can be updated.
+0 updates are security updates.
+
+
+*** System restart required ***
+Last login: Tue Jan  5 15:00:48 2021 from 99.254.9.106
+RedTeamAdmin@JBox:~$ sudo -i
+root@JBox:~# service docker status
+● docker.service - Docker Application Container Engine
+   Loaded: loaded (/lib/systemd/system/docker.service; disabled; vendor preset: 
+   Active: inactive (dead)
+     Docs: https://docs.docker.com
+root@JBox:~# 
+root@JBox:~# service docker start
+root@JBox:~# docker ps -a
+CONTAINER ID        IMAGE                    COMMAND             CREATED             STATUS                    PORTS               NAMES
+b56016cc715e        cyberxsecurity/ansible   "bash"              2 weeks ago         Exited (0) 31 hours ago                       sweet_benz
+root@JBox:~# docker start sweet_benz
+sweet_benz
+root@JBox:~# docker sweet_benz attach
+docker: 'sweet_benz' is not a docker command.
+See 'docker --help'
+root@JBox:~# docker attach sweet_benz
+root@b56016cc715e:~# cd /etc/ansible/
+root@b56016cc715e:/etc/ansible# ls
+Sarah-Repo  ansible.cfg         beats_config.yml   hosts           roles
+Test        ansible_config.yml  beats_install.yml  instal-elk.yml
+root@b56016cc715e:/etc/ansible# cd Sarah-Repo 
+bash: cd: Sarah-Repo: Not a directory
+root@b56016cc715e:/etc/ansible# ls
+Sarah-Repo  ansible.cfg         beats_config.yml   hosts           roles
+Test        ansible_config.yml  beats_install.yml  instal-elk.yml
+root@b56016cc715e:/etc/ansible# cp nsible.cfg Sarah-Repo 
+cp: cannot stat 'nsible.cfg': No such file or directory
+root@b56016cc715e:/etc/ansible# cp ansible.cfg Sarah-Repo 
+root@b56016cc715e:/etc/ansible# ls
+Sarah-Repo  ansible.cfg         beats_config.yml   hosts           roles
+Test        ansible_config.yml  beats_install.yml  instal-elk.yml
+root@b56016cc715e:/etc/ansible# nano ansible.cfg 
+
+root@b56016cc715e:/etc/ansible# cd Sarah-Repo 
+bash: cd: Sarah-Repo: Not a directory
+root@b56016cc715e:/etc/ansible# nano Sarah-Repo 
+root@b56016cc715e:/etc/ansible# nano beats_config.yml 
+
+  GNU nano 2.9.3                                                                                                   beats_config.yml                                                                                                              
+
+  #ssl.key_passphrase: ''
+
+  # Configure cipher suites to be used for SSL connections
+  #ssl.cipher_suites: []
+
+  # Configure curve types for ECDHE-based cipher suites
+  #ssl.curve_types: []
+
+  # Configure what types of renegotiation are supported. Valid options are
+  # never, once, and freely. Default is never.
+  #ssl.renegotiation: never
+
+  #metrics.period: 10s
+  #state.period: 1m
+
+#================================ HTTP Endpoint ======================================
+# Each beat can expose internal metrics through a HTTP endpoint. For security
+# reasons the endpoint is disabled by default. This feature is currently experimental.
+# Stats can be access through http://localhost:5066/stats . For pretty JSON output
+# append ?pretty to the URL.
+
+# Defines if the HTTP endpoint is enabled.
+#http.enabled: false
+
+# The HTTP endpoint will bind to this hostname, IP address, unix socket or named pipe.
+# When using IP addresses, it is recommended to only use localhost.
+#http.host: localhost
+
+# Port on which the HTTP endpoint will bind. Default is 5066.
+#http.port: 5066
+
+# Define which user should be owning the named pipe.
+#http.named_pipe.user:
+
+# Define which the permissions that should be applied to the named pipe, use the Security
+# Descriptor Definition Language (SDDL) to define the permission. This option cannot be used with
+# `http.user`.
+#http.named_pipe.security_descriptor:
+
+#============================= Process Security ================================
+
+# Enable or disable seccomp system call filtering on Linux. Default is enabled.
+#seccomp.enabled: true
+
+#================================= Migration ==================================
+
+# This allows to enable 6.7 migration aliases
+#migration.6_to_7.enabled: false
