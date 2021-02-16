@@ -72,13 +72,15 @@ A summary of the access policies in place can be found in the table below.
 
 ### Elk Configuration
 
-Ansible was used to automate configuration of the ELK machine. No configuration was performed manually, which is advantageous because *You do not have to separately set up$
+Ansible was used to automate configuration of the ELK machine. No configuration was performed manually, which is advantageous because *You do not have to separately set up and manage each independantly. Ansible will perform those tasks for you.*
 
 
 The playbook implements the following tasks:
-- _TODO: In 3-5 bullets, explain the steps of the ELK installation play. E.g., install Docker; download image; etc._
-- ...
-- ...
+
+* Install Docker
+* Install Pip3
+* Checks on memory space
+* Downloads and launces the Elk Docker Container
 
 The following screenshot displays the result of running `docker ps` after successfully configuring the ELK instance.
 ![Docker_sweet_benz](https://github.com/scassidy9/Sarah-Repo/blob/main/Images/Docker_sweet_benz.png)
@@ -100,14 +102,14 @@ These Beats allow us to collect the following information from each machine:
 In order to use the playbook, you will need to have an Ansible control node already configured. Assuming you have such a control node provisioned:
 
 SSH into the control node and follow the steps below:
-- Copy the Ansible ELK Installation file .
-- Update the _____ file to include...
-- Run the playbook, and navigate to ____ to check that the installation worked as expected.
+- Copy the Ansible file to etc/ansible once logged into Jumpbox>AnsibleVM.
+- Update the hosts file to include the webserver IP addresses and the webservers group
+- Run the playbook, and navigate to the virtual machine to check that the installation worked as expected.
 
-_TODO: Answer the following questions to fill in the blanks:
+
 * Which file is the playbook? Where do you copy it?
-  * Ansible. 
+  * /etc/Ansible. 
 * Which file do you update to make Ansible run the playbook on a specific machine? How do I specify which machine to install the ELK server on versus which to install FileBeat
-  * 
+  * Hosts file
 * Which URL do you navigate to in order to check that the ELK server is running?
   *  http://13.68.239.154:5601/
